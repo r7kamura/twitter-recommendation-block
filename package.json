@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "prettier --write .",
     "preview": "vite preview"
   },
   "devDependencies": {

@@ -113,7 +113,8 @@ function findRecommendedTopicsSidebarSection() {
     Array.from(
       document.querySelectorAll('a[href="/explore/tabs/for-you"]')
     ).map((element) => {
-      return element.closest('div[class*="r-g6ijar"]');
+      return element.closest('section[role="region"]')?.parentElement
+        ?.parentElement;
     })
   );
 }
@@ -122,7 +123,7 @@ function findRecommendedUsersSidebarSection() {
   return compact(
     Array.from(document.querySelectorAll('a[href^="/i/connect_people"]')).map(
       (element) => {
-        return element.closest('div[class*="r-g6ijar"]');
+        return element.closest('aside[role="complementary"]')?.parentElement;
       }
     )
   );

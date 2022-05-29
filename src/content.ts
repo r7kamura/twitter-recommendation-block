@@ -1,11 +1,11 @@
 import {
-  blockPromotedTweets,
-  blockRecommendedTopics,
-  blockRecommendedUsers,
+  blockPromotedTweetsInTimeline,
+  blockRecommendedTopicsInTimeline,
+  blockRecommendedUsersInTimeline,
 } from "./twitter";
 
 window.setInterval(() => {
-  blockPromotedTweets();
-  blockRecommendedTopics();
-  blockRecommendedUsers();
+  blockPromotedTweetsInTimeline();
+  blockRecommendedTopicsInTimeline();
+  blockRecommendedUsersInTimeline();
 }, 1000);

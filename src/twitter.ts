@@ -1,18 +1,18 @@
 import { compact } from "./array";
 
-export function blockPromotedTweets() {
+export function blockPromotedTweetsInTimeline() {
   findPromotedTweetCellItems().forEach((element) => {
     element.style.display = "none";
   });
 }
 
-export function blockRecommendedTopics() {
+export function blockRecommendedTopicsInTimeline() {
   findRecommendedTopicsCellItems().forEach((element) => {
     element.style.display = "none";
   });
 }
 
-export function blockRecommendedUsers() {
+export function blockRecommendedUsersInTimeline() {
   findRecommendedUsersCellItems().forEach((element) => {
     element.style.display = "none";
   });

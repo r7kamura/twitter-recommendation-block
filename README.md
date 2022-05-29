@@ -7,6 +7,7 @@ Browser extension to block recommendation and promotion contents on [twitter.com
 ## Features
 
 - Block promoted tweets in timeline.
+- Block recommended topics in sidebar.
 - Block recommended topics in timeline.
 - Block recommended users in timeline.
 - Block recommended users in sidebar.

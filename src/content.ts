@@ -1,5 +1,6 @@
 import {
   blockPromotedTweetsInTimeline,
+  blockRecommendedTopicsInSidebar,
   blockRecommendedTopicsInTimeline,
   blockRecommendedUsersInSidebar,
   blockRecommendedUsersInTimeline,
@@ -7,6 +8,7 @@ import {
 
 window.setInterval(() => {
   blockPromotedTweetsInTimeline();
+  blockRecommendedTopicsInSidebar();
   blockRecommendedTopicsInTimeline();
   blockRecommendedUsersInSidebar();
   blockRecommendedUsersInTimeline();

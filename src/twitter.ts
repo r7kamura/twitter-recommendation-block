@@ -6,6 +6,12 @@ export function blockPromotedTweetsInTimeline() {
   });
 }
 
+export function blockRecommendedTopicsInSidebar() {
+  findRecommendedTopicsSidebarSection().forEach((element) => {
+    element.style.display = "none";
+  });
+}
+
 export function blockRecommendedTopicsInTimeline() {
   findRecommendedTopicsCellItems().forEach((element) => {
     element.style.display = "none";
@@ -102,11 +108,21 @@ function findRecommendedUsersShowMoreCellItems() {
   );
 }
 
+function findRecommendedTopicsSidebarSection() {
+  return compact(
+    Array.from(
+      document.querySelectorAll('a[href="/explore/tabs/for-you"]')
+    ).map((element) => {
+      return element.closest('div[class*="r-g6ijar"]');
+    })
+  );
+}
+
 function findRecommendedUsersSidebarSection() {
   return compact(
     Array.from(document.querySelectorAll('a[href^="/i/connect_people"]')).map(
       (element) => {
-        return element.closest('div[class*="css-1dbjc4n"]');
+        return element.closest('div[class*="r-g6ijar"]');
       }
     )
   );

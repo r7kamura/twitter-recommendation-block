@@ -1,6 +1,6 @@
 {
   "name": "Twitter Recommend Block",
-  "description": "Block promotion and recommendation contents on twitter.com.",
+  "description": "Block recommendation and promotion contents on twitter.com.",
   "version": "0.0.1",
   "manifest_version": 3,
   "icons": {

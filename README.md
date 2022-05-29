@@ -7,3 +7,4 @@ Browser extension to block recommendation and promotion contents on [twitter.com
 ## Features
 
 - Block promoted tweets.
+- Block recommended users.

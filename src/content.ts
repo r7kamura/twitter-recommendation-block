@@ -8,6 +8,6 @@ import {
 window.setInterval(() => {
   blockPromotedTweetsInTimeline();
   blockRecommendedTopicsInTimeline();
-  blockRecommendedUsersInTimeline();
   blockRecommendedUsersInSidebar();
+  blockRecommendedUsersInTimeline();
 }, 1000);

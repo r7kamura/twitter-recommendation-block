@@ -14,8 +14,6 @@ export function blockRecommendedTopicsInTimeline() {
 
 export function blockRecommendedUsersInSidebar() {
   findRecommendedUsersSidebarSection().forEach((element) => {
-    console.log(element);
-
     element.style.display = "none";
   });
 }

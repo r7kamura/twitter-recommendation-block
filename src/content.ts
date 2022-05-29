@@ -1,11 +1,11 @@
 import {
   blockPromotedTweets,
   blockRecommendedTopics,
-  blockWhoToFollow,
+  blockRecommendedUsers,
 } from "./twitter";
 
 window.setInterval(() => {
   blockPromotedTweets();
   blockRecommendedTopics();
-  blockWhoToFollow();
+  blockRecommendedUsers();
 }, 1000);

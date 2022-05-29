@@ -12,8 +12,8 @@ export function blockRecommendedTopics() {
   });
 }
 
-export function blockWhoToFollow() {
-  findWhoToFollowCellItems().forEach((element) => {
+export function blockRecommendedUsers() {
+  findRecommendedUsersCellItems().forEach((element) => {
     element.style.display = "none";
   });
 }
@@ -67,16 +67,16 @@ function findRecommendedTopicsMoreTopicsCellItems() {
   );
 }
 
-function findWhoToFollowCellItems() {
+function findRecommendedUsersCellItems() {
   return [
     ...findBlankCellItems(),
-    ...findWhoToFollowHeadingCellItems(),
+    ...findRecommendedUsersHeadingCellItems(),
     ...findFollowableCellItems(),
-    ...findWhoToFollowShowMoreCellItems(),
+    ...findRecommendedUsersShowMoreCellItems(),
   ];
 }
 
-function findWhoToFollowHeadingCellItems() {
+function findRecommendedUsersHeadingCellItems() {
   return compact(
     Array.from(document.querySelectorAll('h2[role="heading"]')).map(
       (element) => {
@@ -86,7 +86,7 @@ function findWhoToFollowHeadingCellItems() {
   );
 }
 
-function findWhoToFollowShowMoreCellItems() {
+function findRecommendedUsersShowMoreCellItems() {
   return compact(
     Array.from(document.querySelectorAll('a[href^="/i/connect_people"]')).map(
       (element) => {

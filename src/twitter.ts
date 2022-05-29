@@ -104,7 +104,7 @@ function findRecommendedUsersShowMoreCellItems() {
 
 function findRecommendedUsersSidebarSection() {
   return compact(
-    Array.from(document.querySelectorAll('aside[role="complementary"]')).map(
+    Array.from(document.querySelectorAll('a[href^="/i/connect_people"]')).map(
       (element) => {
         return element.closest('div[class*="css-1dbjc4n"]');
       }

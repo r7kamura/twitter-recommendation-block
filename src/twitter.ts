@@ -12,6 +12,14 @@ export function blockRecommendedTopicsInTimeline() {
   });
 }
 
+export function blockRecommendedUsersInSidebar() {
+  findRecommendedUsersSidebarSection().forEach((element) => {
+    console.log(element);
+
+    element.style.display = "none";
+  });
+}
+
 export function blockRecommendedUsersInTimeline() {
   findRecommendedUsersCellItems().forEach((element) => {
     element.style.display = "none";
@@ -91,6 +99,16 @@ function findRecommendedUsersShowMoreCellItems() {
     Array.from(document.querySelectorAll('a[href^="/i/connect_people"]')).map(
       (element) => {
         return element.closest('div[data-testid="cellInnerDiv"]');
+      }
+    )
+  );
+}
+
+function findRecommendedUsersSidebarSection() {
+  return compact(
+    Array.from(document.querySelectorAll('aside[role="complementary"]')).map(
+      (element) => {
+        return element.closest('div[class*="css-1dbjc4n"]');
       }
     )
   );

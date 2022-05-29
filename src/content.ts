@@ -2,7 +2,7 @@ import { compact } from "./array";
 
 function blockPromotedTweets() {
   findPromotedTweets().forEach((element) => {
-    element.remove();
+    element.style.display = "none";
   });
 }
 
@@ -19,7 +19,3 @@ function findPromotedTweets() {
 window.setInterval(() => {
   blockPromotedTweets();
 }, 1000);
-
-document.addEventListener("scroll", () => {
-  blockPromotedTweets();
-});

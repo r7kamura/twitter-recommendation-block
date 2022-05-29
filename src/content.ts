@@ -1,5 +1,25 @@
-function onScroll() {
-  console.log(1);
+import { compact } from "./array";
+
+function blockPromotedTweets() {
+  findPromotedTweets().forEach((element) => {
+    element.remove();
+  });
 }
 
-document.addEventListener("scroll", onScroll);
+function findPromotedTweets() {
+  return compact(
+    Array.from(
+      document.querySelectorAll('div[data-testid="placementTracking"] article')
+    ).map((element) => {
+      return element.closest('div[data-testid="cellInnerDiv"]');
+    })
+  );
+}
+
+window.setInterval(() => {
+  blockPromotedTweets();
+}, 1000);
+
+document.addEventListener("scroll", () => {
+  blockPromotedTweets();
+});

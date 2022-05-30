@@ -2,6 +2,8 @@
 
 ## Unreleasaed
 
+## 0.1.1 - 2022-05-31
+
 ### Changed
 
 - Change extension name: Recommend to Recommendation.

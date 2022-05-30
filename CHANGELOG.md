@@ -2,6 +2,10 @@
 
 ## Unreleasaed
 
+### Changed
+
+- Change extension name: Recommend to Recommendation.
+
 ### Fixed
 
 - Fix bug: users were accidentally hidden in likes list, etc.

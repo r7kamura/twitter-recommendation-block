@@ -2,6 +2,8 @@
 
 ## Unreleasaed
 
+## 0.1.3 - 2022-06-02
+
 ### Fixed
 
 - Fix detection logic for recommended users in timeline.
